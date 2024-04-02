@@ -1,23 +1,21 @@
 body{
 
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    padding: 0;
+    margin: 0;
     text-align: center;
     height: 100%;
+    background-image: url(./bg_image.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    
 }
 
 #a{
     
     font-size: larger;
     font-family: 'Times New Roman';
-    width: 100%;
-    background-image: url(./bg_image.jpg);
-    background-repeat: no-repeat;
-    position: relative;
-    height: 100%;
-
+    
 }
 #input{
     opacity: 0.8;
@@ -49,6 +47,8 @@ footer{
 
 a{
     color: red;
+    border: 1px solid yellow;
+    background-color: yellowgreen;
 }
 a:hover{
     font-style: italic;
