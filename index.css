@@ -48,7 +48,7 @@ footer{
 }
 
 a{
-    color: yellow;
+    color: red;
 }
 a:hover{
     font-style: italic;
