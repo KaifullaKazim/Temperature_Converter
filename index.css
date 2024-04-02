@@ -1,42 +1,44 @@
-body{
-
+body {
     padding: 0;
     margin: 0;
     text-align: center;
     height: 100%;
     background-image: url(./bg_image.jpg);
     background-repeat: no-repeat;
+    background-size: cover; /* Ensure the background image covers the entire background */
     position: relative;
-    background-size: cover;
-    
 }
 
-#a{
-    
+#a {
     font-size: larger;
     font-family: 'Times New Roman';
-    
-}
-#input{
-    opacity: 0.8;
-    height: 50px;
-    font-size:larger;
 }
 
-#convert{
+#input {
+    opacity: 0.8;
+    height: 50px;
+    font-size: larger;
+    width: 80%;
+    margin: 10px auto;
+}
+
+#convert {
     height: 50px;
     width: 100px;
     font-size: large;
-
+    margin: 10px auto;
 }
-#result{
+
+#result {
     opacity: 0.8;
-    width:auto;
+    width: auto;
     height: 50px;
     font-size: larger;
+    margin: 10px auto;
 }
-footer{
-    margin-top: px;
+
+footer {
+    margin-top: 20px;
     color: black;
     text-align: center;
     font-size: larger;
@@ -45,19 +47,37 @@ footer{
     width: 100%;
 }
 
-a{
+a {
     color: red;
     border: 1px solid yellow;
     background-color: yellowgreen;
+    display: block;
+    margin: 10px auto;
+    width: 150px;
+    padding: 10px;
+    text-decoration: none;
 }
-a:hover{
+
+a:hover {
     font-style: italic;
 }
 
-@media (min-width:600px){
-    #a{
-        background-repeat: round;
+/* Media queries for responsiveness */
+@media only screen and (max-width: 767px) {
+    #input, #result, #convert {
+        width: 80%;
     }
 
-    
+    input[type="radio"] {
+        margin: 5px;
+    }
+
+    footer {
+        margin-top: 50px;
+    }
+
+    /* Adjust background image for smaller screens */
+    body {
+        background-size: contain;
+    }
 }
