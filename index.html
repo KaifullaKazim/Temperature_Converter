@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <link href="./index.css" rel="stylesheet" type="text/css">
+    <title>Temperature Converter</title>
+    <body>
+        <div>
+            <div id="a">
+                <h1>Temperature Converter...</h1>
+                <input type="text" placeholder="  Enter the Temperature" name="temp" id="input" required></br></br>
+
+                <input type="radio" value="Celsius" name="unit">Celsius
+                <input type="radio" value="Farhenheit" name="unit">Farhenheit
+                <input type="radio" value="Kelvin" name="unit">Kelvin
+
+                <h1> Convert to </h1></br>
+
+
+                <input type="radio" value="CCelsius" name="cunit">Celsius
+                <input type="radio" value="FFarhenheit" name="cunit">Farhenheit
+                <input type="radio" value="KKelvin" name="cunit">Kelvin</br></br>
+
+                <input type="button" value="Convert" onclick="Convert()" id="convert">
+                <div id="result1">
+                    <h1>Result:</h1>
+                    <input type="text" id="result" value="0" readonly>
+                </div>
+            
+            <footer>
+                <div id="footer">
+                <p>Developed by:- Mohammed Kaifulla Kazim</p>
+                <p>For any queries mail to:- kaifullakazim@gmail.com</p>
+                <p>To get the Source Code of this Project <a href="https://github.com/KaifullaKazim" target="_blank">Click Here</a></p>
+                </div>
+            </footer>
+        </div>
+        </div>
+        
+    </body>
+    
+    
+</html>
+
+<script>
+    function Convert()
+    {
+        let x= document.querySelector("#input").value;
+        let y= document.querySelector('input[name="unit"]:checked').value;
+        let z= document.querySelector('input[name="cunit"]:checked').value;
+        let result;
+        if(y=="Celsius" && z=="CCelsius"){
+            x=parseFloat(x);
+            result=x;
+        }
+        else if(y=="Celsius" && z=="FFarhenheit"){
+            x=parseFloat(x);
+            result=(x*9/5)+32;
+        }
+        else if(y=="Celsius" && z=="KKelvin"){
+            x=parseFloat(x);
+            result=parseInt(x)+273.15;
+        }
+        else if(y=="Farhenheit" && z=="CCelsius"){
+            x=parseFloat(x);
+            result=(x-32)*5/9;
+        }
+        else if(y=="Farhenheit" && z=="FFarhenheit"){
+            x=parseFloat(x);
+            result=x;
+        }
+        else if(y=="Farhenheit" && z=="KKelvin"){
+            x=parseFloat(x);
+            result=(x-32)*5/9+273.15;
+        }
+        else if(y=="Kelvin" && z=="CCelsius"){
+            x=parseFloat(x);
+            result=x-273.15;
+        }
+        else if(y=="Kelvin" && z=="FFarhenheit"){
+            x=parseFloat(x);
+            result=(x-273.15)*9/5+32;
+        }
+        else if(y=="Kelvin" && z=="KKelvin"){
+            x=parseFloat(x);
+            result=x;
+            
+        }
+        document.querySelector("#result").value=result;
+        
+
+    }
+</script>
